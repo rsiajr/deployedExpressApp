@@ -20,30 +20,27 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.get('/', function (req, res) { 
 
-    res.render('home.handlebars',{
+    res.render('home',{
         title: "Home Page"
     })
 }); 
 
 app.get('/contact-us', function (req, res) { 
 
-    res.render('contactus.handlebars',{
+    res.render('contactus',{
         title: "Contact Us Page"
     })
 }); 
 
 app.get('/products', function (req, res) { 
 
-    res.render('products.handlebars',{
+    res.render('product',{
         title: "Products Page"
     })
 
 }); 
 
 const PORT=3000; 
-
-  
-
 app.listen(PORT,()=>{ 
 
     console.log(`Web Server Started`); 
